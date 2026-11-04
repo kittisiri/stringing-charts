@@ -1,0 +1,73 @@
+:root{
+  --bg:#f3f5f6; --panel:#ffffff; --fg:#17212b; --muted:#5d6b78; --line:#d7dee4;
+  --accent:#0b6e75; --accent-ink:#ffffff; --comp:#b4530a; --comp-bg:#fdf0e4; --hi:#fff1a8; --hi-edge:#d9b400;
+  --num:"Barlow Condensed","Arial Narrow",sans-serif; --body:"Barlow",system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#11171c; --panel:#1a2229; --fg:#e8eef2; --muted:#93a3b0; --line:#2c3842;
+  --accent:#3fb6be; --accent-ink:#06191b; --comp:#f29a4a; --comp-bg:#33231a; --hi:#4a4214; --hi-edge:#e0c13a; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#11171c; --panel:#1a2229; --fg:#e8eef2; --muted:#93a3b0; --line:#2c3842;
+  --accent:#3fb6be; --accent-ink:#06191b; --comp:#f29a4a; --comp-bg:#33231a; --hi:#4a4214; --hi-edge:#e0c13a; color-scheme:dark}
+html,body{height:100%;margin:0}
+body{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:17px;box-sizing:border-box;
+  padding:10px max(14px,env(safe-area-inset-right,0px)) 10px max(14px,env(safe-area-inset-left,0px))}
+.wrap{max-width:1100px;margin:0 auto;display:flex;flex-direction:column;gap:10px;min-height:100%}
+button{cursor:pointer;-webkit-tap-highlight-color:transparent}
+button:focus-visible{outline:3px solid var(--accent);outline-offset:-3px}
+
+/* picker: racket / mains / crosses */
+.sel{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:10px;display:grid;gap:8px}
+.prow{display:grid;grid-template-columns:76px minmax(0,1fr) minmax(0,1.3fr);gap:8px;align-items:center}
+.prow.r{grid-template-columns:76px minmax(0,1fr)}
+.prow>b{font:600 15px var(--body);color:var(--muted)}
+.seg{display:flex;border:1px solid var(--line);border-radius:9px;overflow:hidden;min-width:0}
+.seg button{flex:1;border:0;background:transparent;color:var(--fg);font:600 17px var(--body);padding:8px 2px;min-height:46px}
+.seg button+button{border-left:1px solid var(--line)}
+.seg button[aria-pressed="true"]{background:var(--accent);color:var(--accent-ink)}
+.seg .a{font:500 15px var(--body);color:inherit;opacity:.8;margin-right:4px}
+.step{display:flex;align-items:center;border:1px solid var(--line);border-radius:9px;overflow:hidden;min-width:0}
+.step button{width:48px;min-height:46px;border:0;background:transparent;color:var(--accent);font:600 26px var(--body)}
+.step button:disabled{color:var(--line);cursor:default}
+.step output{flex:1;text-align:center;font:700 28px var(--num);font-variant-numeric:tabular-nums}
+.step output small{font:500 14px var(--body);color:var(--muted);margin-left:3px}
+
+/* summary */
+.sum{display:flex;flex-wrap:wrap;gap:4px 18px;align-items:baseline;font-size:15px;color:var(--muted);min-height:24px}
+.sum b{font:600 19px var(--num);color:var(--fg);font-variant-numeric:tabular-nums}
+.chip{display:inline-block;font:600 13px var(--body);padding:1px 6px;border-radius:5px;background:var(--comp-bg);color:var(--comp);vertical-align:middle}
+
+/* tables */
+.cols{display:grid;gap:12px;grid-template-columns:1fr;flex:1;min-height:0}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:8px 10px;min-width:0;display:flex;flex-direction:column}
+.card h2{margin:2px 4px 4px 14px;font:600 22px var(--num);letter-spacing:.02em}
+.card h2 small{font:400 14px var(--body);color:var(--muted);margin-left:6px}
+table{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums;flex:1}
+th{font:500 12px var(--body);color:var(--muted);text-transform:uppercase;letter-spacing:.06em;text-align:left;padding:2px 8px;height:22px}
+th:first-child{padding-left:22px}
+td{border-top:1px solid var(--line);padding:0 8px;height:60px}
+th.t,td.t{text-align:right;padding-right:22px}
+td.s{width:1%;white-space:nowrap;font:700 26px var(--num);padding-left:22px;padding-right:18px}
+td.s .band{display:block;font:400 13px var(--body);color:var(--muted);margin-top:-2px}
+td.d{font:700 40px var(--num)}
+td.t{font:500 20px var(--num);color:var(--muted)}
+tr.row{cursor:pointer}
+tr.comp td.d{color:var(--comp)}
+tr.row.on td{background:var(--hi)}
+tr.row.on td:first-child{box-shadow:inset 6px 0 0 var(--hi-edge)}
+.msg{padding:24px;color:var(--muted)}
+.foot{font-size:13px;color:var(--muted)}
+
+/* phone: α segments drop under the stepper so nothing clips */
+@media (max-width:519px){
+  .prow{grid-template-columns:64px minmax(0,1fr)}
+  .prow>.seg{grid-column:2}
+  .seg button{font-size:16px}
+}
+/* iPad and wider: tables side by side, rows share the screen height */
+@media (min-width:700px){
+  .cols{grid-template-columns:1fr 1fr}
+  td{height:56px}
+  td.d{font-size:46px}
+}
+@media (min-width:700px) and (min-height:900px){ td.d{font-size:52px} td.s{font-size:30px} }

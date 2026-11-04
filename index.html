@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Stringing Charts</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@500;600;700&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+  <section class="sel" aria-label="Scenario">
+    <div class="prow r"><b>Racket</b><div class="seg" id="racket"></div></div>
+    <div class="prow"><b>Mains</b>
+      <div class="step"><button id="tm-" aria-label="Mains minus">−</button><output id="tm"></output><button id="tm+" aria-label="Mains plus">+</button></div>
+      <div class="seg" id="am" aria-label="Mains α"></div></div>
+    <div class="prow"><b>Crosses</b>
+      <div class="step"><button id="tc-" aria-label="Crosses minus">−</button><output id="tc"></output><button id="tc+" aria-label="Crosses plus">+</button></div>
+      <div class="seg" id="ac" aria-label="Crosses α"></div></div>
+  </section>
+  <div class="sum" id="sum"></div>
+  <main class="cols" id="out"></main>
+  <div class="foot">Tap a row to mark where you are · tap again to clear</div>
+</div>
+<script src="app.js"></script>
+</body>
+</html>

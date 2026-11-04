@@ -1,0 +1,32 @@
+{
+  "schema": 1,
+  "rackets": [
+    {
+      "id": "yonex-vcore-95-2026", "name": "Yonex VCORE 95", "year": 2026,
+      "mains": 16, "crosses": 20, "split_outer_crosses": true,
+      "measurements": {
+        "rim_height": 31.4, "rim_width": 24.3, "longest_cross": 12,
+        "main_span": 18.6, "cross_span": 25.2, "top_clearance": 3.0,
+        "len_outer_main": 21.0, "len_top_cross": 16.9, "len_throat_cross": 14.1
+      }
+    },
+    {
+      "id": "head-squared-2026", "name": "Head Squared", "year": 2026,
+      "mains": 16, "crosses": 18, "split_outer_crosses": false,
+      "measurements": {
+        "rim_height": 32.5, "rim_width": 25.1, "longest_cross": 10,
+        "main_span": 19.5, "cross_span": 26.4, "top_clearance": 2.7,
+        "len_outer_main": 20.8, "len_top_cross": 14.6, "len_throat_cross": 14.7
+      }
+    },
+    {
+      "id": "head-gravity-mp-2025", "name": "Head Gravity MP", "year": 2025,
+      "mains": 16, "crosses": 20, "split_outer_crosses": false,
+      "measurements": {
+        "rim_height": 32.7, "rim_width": 25.5, "longest_cross": 11,
+        "main_span": 19.5, "cross_span": 26.3, "top_clearance": 2.8,
+        "len_outer_main": 20.2, "len_top_cross": 15.0, "len_throat_cross": 15.0
+      }
+    }
+  ]
+}
