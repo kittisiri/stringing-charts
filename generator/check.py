@@ -18,6 +18,8 @@ DERIVED = {
                           "gap_bot": 2.19, "ntop": 2.06, "nbot": 1.99, "residual": 0.14},
     "head-gravity-mp-2025": {"f": 0.467, "s_m": 1.3, "gap_m": 2.31, "s_c": 1.384, "gap_top": 2.02,
                              "gap_bot": 2.6, "ntop": 2.01, "nbot": 1.89, "residual": 0.3},
+    "wilson-python-98-pro-stock": {"f": 0.472, "s_m": 1.3, "gap_m": 2.0, "s_c": 1.4, "gap_top": 1.86,
+                                   "gap_bot": 2.14, "ntop": 2.15, "nbot": 2.15, "residual": 0.23},
 }
 
 # 2. Hand charts Duke strung, under the old 3-group / 6-row layout, α 0.25 mains / 0.15 crosses.

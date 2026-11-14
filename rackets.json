@@ -27,6 +27,15 @@
         "main_span": 19.5, "cross_span": 26.3, "top_clearance": 2.8,
         "len_outer_main": 20.2, "len_top_cross": 15.0, "len_throat_cross": 15.0
       }
+    },
+    {
+      "id": "wilson-python-98-pro-stock", "name": "Python 98", "year": null,
+      "mains": 16, "crosses": 20, "split_outer_crosses": false,
+      "measurements": {
+        "rim_height": 32.2, "rim_width": 24.7, "longest_cross": 11,
+        "main_span": 19.5, "cross_span": 26.6, "top_clearance": 2.6,
+        "len_outer_main": 21.3, "len_top_cross": 14.6, "len_throat_cross": 14.8
+      }
     }
   ]
 }
