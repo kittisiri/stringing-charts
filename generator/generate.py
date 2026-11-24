@@ -166,7 +166,7 @@ def derive(r):
             "residual": half_up_dp(residual, 2),
         },
         "bands": cross_bands(n, r["split_outer_crosses"]),
-        "comp": {"M1": 3, f"M{k}": 6, "C1": 6},
+        "comp": {"M1": 2, f"M{k}": 4, "C1": 4},
     }
 
 

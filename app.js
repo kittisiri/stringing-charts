@@ -73,7 +73,7 @@ async function render() {
   $("sum").innerHTML = `<span>Avg <b>${f2(cell.avg[0])}</b> / <b>${f2(cell.avg[1])}</b></span>
     <span>mains α <b>${st.am}</b> design · <b>${f2(cell.alpha[0])}</b> true</span>
     <span>crosses α <b>${st.ac}</b> design · <b>${f2(cell.alpha[1])}</b> true</span>
-    <span><span class="chip">+3</span> <span class="chip">+6</span> already in Dial</span>`;
+    <span><span class="chip">+2</span> <span class="chip">+4</span> already in Dial</span>`;
   $("out").innerHTML = table("Mains", "M1 centre → edge · each side", R.M) + table("Crosses", "top → throat", R.C);
   for (const tr of document.querySelectorAll("tr.row"))
     tr.onclick = () => { st.hi = st.hi === tr.dataset.id ? null : tr.dataset.id; render(); };
